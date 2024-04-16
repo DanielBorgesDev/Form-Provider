@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_exemple/models/user.dart';
-import 'package:provider_exemple/providers/user_provider.dart';
-import 'package:provider_exemple/views/display_data_screen.dart';
+import '../providers/user_provider.dart';
+import '../models/user.dart';
+import '../views/display_data_screen.dart';
 
 class UserFormScreen extends StatelessWidget {
   @override
@@ -22,56 +22,49 @@ class UserFormScreen extends StatelessWidget {
                   decoration: InputDecoration(labelText: 'Primeiro Nome'),
                   onChanged: (value) {
                     userProvider.updateUser(
-                      userProvider.user.copyWith(firstName: value),
-                    );
+                        userProvider.user.copyWith(firstName: value));
                   },
                 ),
                 TextField(
                   decoration: InputDecoration(labelText: 'Sobrenome'),
                   onChanged: (value) {
                     userProvider.updateUser(
-                      userProvider.user.copyWith(lastName: value),
-                    );
+                        userProvider.user.copyWith(lastName: value));
                   },
                 ),
                 TextField(
                   decoration: InputDecoration(labelText: 'Email'),
                   onChanged: (value) {
-                    userProvider.updateUser(
-                      userProvider.user.copyWith(email: value),
-                    );
+                    userProvider
+                        .updateUser(userProvider.user.copyWith(email: value));
                   },
                 ),
                 TextField(
                   decoration: InputDecoration(labelText: 'Título'),
                   onChanged: (value) {
-                    userProvider.updateUser(
-                      userProvider.user.copyWith(title: value),
-                    );
+                    userProvider
+                        .updateUser(userProvider.user.copyWith(title: value));
                   },
                 ),
                 TextField(
                   decoration: InputDecoration(labelText: 'Telefone'),
                   onChanged: (value) {
-                    userProvider.updateUser(
-                      userProvider.user.copyWith(phone: value),
-                    );
+                    userProvider
+                        .updateUser(userProvider.user.copyWith(phone: value));
                   },
                 ),
                 TextField(
                   decoration: InputDecoration(labelText: 'Assunto da Ideia'),
                   onChanged: (value) {
                     userProvider.updateUser(
-                      userProvider.user.copyWith(subjectIdea: value),
-                    );
+                        userProvider.user.copyWith(subjectIdea: value));
                   },
                 ),
                 TextField(
                   decoration: InputDecoration(labelText: 'Descrição da Ideia'),
                   onChanged: (value) {
                     userProvider.updateUser(
-                      userProvider.user.copyWith(descriptionOfIdea: value),
-                    );
+                        userProvider.user.copyWith(descriptionOfIdea: value));
                   },
                 ),
                 ElevatedButton(

@@ -1,9 +1,7 @@
+import 'package:app_provider/providers/user_provider.dart';
+import 'package:app_provider/views/user_form_views.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_exemple/providers/user_provider.dart';
-import 'package:provider_exemple/views/user_form_views.dart';
-
-
 
 void main() {
   runApp(MyApp());
