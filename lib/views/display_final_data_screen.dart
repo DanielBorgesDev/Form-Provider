@@ -1,7 +1,7 @@
-import 'package:app_provider/providers/organization_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/user_provider.dart';
+import '../providers/organization_provider.dart';
 
 class DisplayFinalDataScreen extends StatelessWidget {
   @override
@@ -12,7 +12,7 @@ class DisplayFinalDataScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fomulario final'),
+        title: Text('Formulário Final'),
       ),
       body: Center(
         child: Column(

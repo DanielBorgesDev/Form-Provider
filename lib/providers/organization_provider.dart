@@ -6,8 +6,18 @@ class OrganizationProvider extends ChangeNotifier {
 
   Organization get organization => _organization;
 
-  void updateOrganization(Organization newOrganization) {
-    _organization = newOrganization;
+  void updateOrganizationField({
+    String? organizationName,
+    String? address,
+    String? organizationPhone,
+    String? organizationCep,
+  }) {
+    _organization = _organization.copyWith(
+      organizationName: organizationName,
+      address: address,
+      organizationPhone: organizationPhone,
+      organizationCep: organizationCep,
+    );
     notifyListeners();
   }
 }

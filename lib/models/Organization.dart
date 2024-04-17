@@ -1,21 +1,17 @@
-// ignore: file_names
 class Organization {
   String? organizationName;
   String? address;
   String? organizationPhone;
   String? organizationCep;
 
-  Organization(
-      {this.organizationName,
-      this.address,
-      this.organizationPhone,
+  Organization({
+    this.organizationName,
+    this.address,
+    this.organizationPhone,
+    this.organizationCep,
+  });
 
-  Organization copyWith({required String address}) {}
-
-  Organization copyWith({required String organizationName}) {}
-      this.organizationCep});
-
-  Organization copyWithOrganization({
+  Organization copyWith({
     String? organizationName,
     String? address,
     String? organizationPhone,

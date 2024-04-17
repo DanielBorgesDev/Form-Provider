@@ -12,7 +12,6 @@ class OrganizationFormView extends StatelessWidget {
         title: Text('Cadastro de Organização'),
       ),
       body: SingleChildScrollView(
-        // Envolver o conteúdo em SingleChildScrollView
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Consumer<OrganizationProvider>(
@@ -24,36 +23,32 @@ class OrganizationFormView extends StatelessWidget {
                     decoration:
                         const InputDecoration(labelText: 'Nome da Organização'),
                     onChanged: (value) {
-                      organizationProvider.updateOrganization(
-                          organizationProvider.organization.organizationName
-                              as Organization);
+                      organizationProvider.updateOrganizationField(
+                          organizationName: value);
                     },
                   ),
                   TextField(
                     decoration: const InputDecoration(
                         labelText: 'Endereço da Organização'),
                     onChanged: (value) {
-                      organizationProvider.updateOrganization(
-                          organizationProvider.organization.organizationCep
-                              as Organization);
+                      organizationProvider.updateOrganizationField(
+                          address: value);
                     },
                   ),
                   TextField(
                     decoration: const InputDecoration(
                         labelText: 'Telefone da Organização'),
                     onChanged: (value) {
-                      organizationProvider.updateOrganization(
-                          organizationProvider.organization.organizationPhone
-                              as Organization);
+                      organizationProvider.updateOrganizationField(
+                          organizationPhone: value);
                     },
                   ),
                   TextField(
                     decoration:
                         const InputDecoration(labelText: 'CEP da Organização'),
                     onChanged: (value) {
-                      organizationProvider.updateOrganization(
-                          organizationProvider.organization.organizationCep
-                              as Organization);
+                      organizationProvider.updateOrganizationField(
+                          organizationCep: value);
                     },
                   ),
                   ElevatedButton(
